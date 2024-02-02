@@ -1,6 +1,10 @@
-import { Daemon } from "./js/Daemon.js";
-import { Magician } from "./js/Magician.js";
+import GameSavingLoader from "./GameSavingLoader.js";
 
-const daemon = new Daemon().getAttack();
-const magician = new Magician();
-console.log(`Daemon attack: ${daemon.getAttack()} Magician attack: ${magician.getAttack()}`);
+GameSavingLoader.load().then(
+  (saving) => {
+    console.log(saving);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
