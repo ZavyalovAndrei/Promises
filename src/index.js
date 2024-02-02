@@ -1,4 +1,4 @@
-import GameSavingLoader from "./GameSavingLoader.js";
+import GameSavingLoader from "./js/GameSavingLoader.js";
 
 GameSavingLoader.load().then(
   (saving) => {
