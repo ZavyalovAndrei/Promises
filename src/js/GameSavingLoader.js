@@ -4,11 +4,6 @@ import GameSaving from "./GameSaving.js";
 
 export default class GameSavingLoader {
   static load() {
-    read().then(function (data) {
-      json(data).then(function (result) {
-        return result;
-      });
-    });
     let loadData = null;
     read()
       .then((readValue) => {
